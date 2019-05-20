@@ -3,6 +3,9 @@ const bcrypt = require('bcryptjs')
 const validator = require('validator')
 const jwt = require('jsonwebtoken')
 const Wine = require('./wine')
+const config = require('config')
+const JWT_SECRET = config.get('JWT_SECRET')
+
 
 const userSchema = new mongoose.Schema({
     avatar:{
@@ -86,7 +89,7 @@ userSchema.methods.toJSON = function(){
 
 userSchema.methods.generateAuthToken = async function() {
     const user = this
-    const token = jwt.sign({_id: user._id.toString()},process.env.JWT_SECRET)
+    const token = jwt.sign({_id: user._id.toString()},JWT_SECRET)
     user.tokens = user.tokens.concat({token})
     await user.save()
     return token 
