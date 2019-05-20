@@ -1,0 +1,46 @@
+{
+  "name": "inventory-app",
+  "version": "1.0.0",
+  "description": "Inventory app for wines made with React Redux, Node, MongoDB and Mongoose",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd ./config/dev.env nodemon src/index.js",
+    "test": "env-cmd ./config/test.env jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "Shahyn",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.1.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.5",
+    "multer": "^1.4.1",
+    "node": "^12.2.0",
+    "sharp": "^0.22.1",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^8.0.2",
+    "jest": "^23.6.0",
+    "nodemon": "^1.19.0",
+    "supertest": "^4.0.2"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shahynkamali/Inventory-App-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shahynkamali/Inventory-App-API/issues"
+  },
+  "homepage": "https://github.com/Shahynkamali/Inventory-App-API#readme"
+}
